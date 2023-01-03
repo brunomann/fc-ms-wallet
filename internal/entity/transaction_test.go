@@ -7,8 +7,8 @@ import (
 )
 
 func TestTransactionWhenClientHasBalance(t *testing.T) {
-	client, _ := newClient("Bruno Mann", "b@b.com")
-	client2, _ := newClient("Bruno Mann Ramos", "b@b.com")
+	client, _ := NewClient("Bruno Mann", "b@b.com")
+	client2, _ := NewClient("Bruno Mann Ramos", "b@b.com")
 
 	account := NewAccount(client)
 	account2 := NewAccount(client2)
@@ -32,8 +32,8 @@ func TestTransactionWhenClientHasBalance(t *testing.T) {
 }
 
 func TestTransactionWhenClientNotHasBalance(t *testing.T) {
-	client, _ := newClient("Bruno Mann", "b@b.com")
-	client2, _ := newClient("Bruno Mann Ramos", "b@b.com")
+	client, _ := NewClient("Bruno Mann", "b@b.com")
+	client2, _ := NewClient("Bruno Mann Ramos", "b@b.com")
 
 	account := NewAccount(client)
 	account2 := NewAccount(client2)
@@ -58,8 +58,8 @@ func TestTransactionWhenClientNotHasBalance(t *testing.T) {
 }
 
 func TestTransactionWithZeroValue(t *testing.T) {
-	client, _ := newClient("Bruno Mann", "b@b.com")
-	client2, _ := newClient("Bruno Mann Ramos", "b@b.com")
+	client, _ := NewClient("Bruno Mann", "b@b.com")
+	client2, _ := NewClient("Bruno Mann Ramos", "b@b.com")
 
 	account := NewAccount(client)
 	account2 := NewAccount(client2)

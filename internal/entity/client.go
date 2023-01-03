@@ -16,7 +16,7 @@ type Client struct {
 	UpdatedAt time.Time
 }
 
-func newClient(name string, email string) (*Client, error) {
+func NewClient(name string, email string) (*Client, error) {
 	client := &Client{
 		ID:        uuid.New().String(),
 		Name:      name,
@@ -57,7 +57,7 @@ func (c *Client) Update(name string, email string) error {
 }
 
 func (c *Client) AddAccount(account *Account) error {
-	if account.Client.ID != c.ID{
+	if account.Client.ID != c.ID {
 		return errors.New("Account does not belong to client")
 	}
 	c.Accounts = append(c.Accounts, account)
